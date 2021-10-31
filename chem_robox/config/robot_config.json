@@ -149,7 +149,7 @@
     "z_platform": ["0x1A86"],
     "pipette": ["0x0403"],
     "gripper": ["0x067B", "0xEA60"],
-    "note": "we use VID of usb port to identify the port number, 0x0403: FT232; 0x67b: CP "
+    "note": "VID of usb ports to identify the port number, 0x0403 (FT232); 0x67b (CP) "
   },
 
   "tip_length_adjustment": {

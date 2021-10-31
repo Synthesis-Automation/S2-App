@@ -3,7 +3,7 @@ LARGE_FONT = ("Verdana", 11)
 NORMAL_FONT = ("Verdana", 10)
 SMALL_FONT = ("Verdana", 9)
 
-steps_per_mm_Z = 64      # 8 mm, 2 microstepping: 2x200/8 = 50 for makerbase 
+steps_per_mm_Z = 64      # 8 mm, 2 microstepping:64 for bigtree drivers; 2x200/8 = 50 for makerbase drivers
 
 LIQUID = "Z1"
 TABLET = "Z2"
@@ -11,7 +11,6 @@ CAPPER = "Z3"
 
 GRIPPER_ID = 1
 Z_NORMAL_SPEED = 3000
-
 
 VERSION = "v 1.0"
 SYSTEM_NAME = "Open Automatic Chemical Synthesis Platform - ChemRobox"

@@ -1585,9 +1585,13 @@ class Tip_calibration(ttk.Frame):
         self.popup_window.title("Tip Calibration ")
 
         # Slot selector
-        move_botton = Button(self.popup_window, text="Move to tip rack @", style="Default.TButton",
-                             command=lambda: self.move_to_tip_rack())
-        move_botton.grid(column=1, row=0, padx=40, pady=5)
+        move_botton = Button(self.popup_window, text="Calibrate tip rack (1000 uL)", style="Default.TButton",
+                             command=lambda: self.move_to_tip_rack(rack = "Tips 1000uL"))
+        move_botton.grid(column=0, row=0, pady=5)
+        move_botton_2 = Button(self.popup_window, text="Calibrate tip rack (50 uL)", style="Default.TButton",
+                             command=lambda: self.move_to_tip_rack(rack = "Tips 50uL"))
+        move_botton_2.grid(column=1, row=0, pady=5)
+        self.tip_plate = "Tips 1000uL" # defalut rack
         # Label(self.popup_window, text=" ").grid(column=1, row=7, padx=10, pady=10)
 
         # Move functions as an LabelFrame
@@ -1612,21 +1616,23 @@ class Tip_calibration(ttk.Frame):
                                   command=lambda: self.exit())
         self.button_exit.grid(column=2, row=20, padx=0, pady=10)
 
-    def save_calibration_tip(self, tip="tips_1000uL"):
+    def save_calibration_tip(self, rack = "Tips 1000uL"):
         ''' the Tips was considered as plate name for simiplicity '''
         z = chem_robot.get_axe_position(axe=LIQUID)
-        # tip_plate_50 = chem_robot.deck.get_plate_assignment("Tips 50uL")
-        # tip_plate_1000 = chem_robot.deck.get_plate_assignment("Tips 1000uL")
-        chem_robot.deck.save_calibration(plate="tips_1000uL",
+        if rack == "Tips 1000uL":
+            chem_robot.deck.save_calibration(plate="tips_1000uL",
+                                         calibration_data=[0, 0, z])
+        else:
+            chem_robot.deck.save_calibration(plate="tips_50uL",
                                          calibration_data=[0, 0, z])
         chem_robot.update()
 
     def exit(self):
         self.popup_window.destroy()
 
-    def move_to_tip_rack(self):
-        tip_plate_1000 = chem_robot.deck.get_plate_assignment("Tips 1000uL")
-        vial_to = (tip_plate_1000, "A1")
+    def move_to_tip_rack(self, rack = "Tips 1000uL"):
+        self.tip_plate = chem_robot.deck.get_plate_assignment(rack)
+        vial_to = (self.tip_plate, "A1")
         chem_robot.move_to(head=LIQUID, vial=vial_to)
 
 
