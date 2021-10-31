@@ -1552,7 +1552,6 @@ class Plate_calibration(ttk.Frame):
         plate_for_calibration = self.slot_selection.get_current(format="A1")
         if plate_for_calibration == "C3":
             plate_for_calibration = chem_robot.deck.get_current_reactor_slot()
-        print("plate_for_calibration: ", plate_for_calibration)
         x = chem_robot.get_axe_position("x")
         y = chem_robot.get_axe_position("y")
         current_head = self.move_axies.get_current_head()
@@ -1616,15 +1615,29 @@ class Tip_calibration(ttk.Frame):
                                   command=lambda: self.exit())
         self.button_exit.grid(column=2, row=20, padx=0, pady=10)
 
-    def save_calibration_tip(self, rack = "Tips 1000uL"):
+    def save_calibration_tip(self):
         ''' the Tips was considered as plate name for simiplicity '''
         z = chem_robot.get_axe_position(axe=LIQUID)
-        if rack == "Tips 1000uL":
+        if self.tip_plate == "Tips 1000uL":
             chem_robot.deck.save_calibration(plate="tips_1000uL",
                                          calibration_data=[0, 0, z])
         else:
             chem_robot.deck.save_calibration(plate="tips_50uL",
                                          calibration_data=[0, 0, z])
+
+        # save also the x, y for tip plate
+        plate_for_calibration = chem_robot.deck.get_plate_assignment(assignment = self.tip_plate)
+        x = chem_robot.get_axe_position("x")
+        y = chem_robot.get_axe_position("y")
+        current_head = LIQUID
+        z = chem_robot.get_axe_position(current_head) # z is not useful at this time
+        coordinate_of_vial = chem_robot.deck.vial_coordinate(plate=plate_for_calibration,
+                                                             vial='A1')
+        calibration_data = [x-coordinate_of_vial['x']-chem_robot.deck.head_offsets[current_head][0],
+                            y-coordinate_of_vial['y']-chem_robot.deck.head_offsets[current_head][1],
+                            z-coordinate_of_vial['z']]
+        chem_robot.deck.save_calibration(plate=plate_for_calibration,
+                                         calibration_data=calibration_data)
         chem_robot.update()
 
     def exit(self):
