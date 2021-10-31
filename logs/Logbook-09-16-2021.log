@@ -1,0 +1,44 @@
+2021-09-16 08:42:46,266 Com ports: xy_port= COM5, z_port= COM16, gripper_port= COM6, pipette_port= COM9
+2021-09-16 08:46:07,625 Start sampling...
+
+2021-09-16 08:46:07,625 Run 1 of 10, sampling 0.005 mL from reactor A1 to GC/LC vial at A1
+2021-09-16 08:46:47,100 Run 2 of 10, sampling 0.005 mL from reactor A2 to GC/LC vial at A2
+2021-09-16 08:47:09,727 Stopping......
+
+2021-09-16 08:47:30,710 Run 3 of 10, sampling 0.005 mL from reactor A3 to GC/LC vial at A3
+2021-09-16 08:48:10,187 Run 4 of 10, sampling 0.005 mL from reactor A4 to GC/LC vial at A4
+2021-09-16 08:48:49,943 Run 5 of 10, sampling 0.005 mL from reactor A5 to GC/LC vial at A5
+2021-09-16 08:49:29,732 Run 6 of 10, sampling 0.005 mL from reactor B1 to GC/LC vial at B1
+2021-09-16 08:50:09,318 Run 7 of 10, sampling 0.005 mL from reactor B2 to GC/LC vial at B2
+2021-09-16 08:50:49,148 Run 8 of 10, sampling 0.005 mL from reactor B3 to GC/LC vial at B3
+2021-09-16 08:51:28,866 Run 9 of 10, sampling 0.005 mL from reactor B4 to GC/LC vial at B4
+2021-09-16 08:52:08,656 Run 10 of 10, sampling 0.005 mL from reactor B5 to GC/LC vial at B5
+2021-09-16 08:53:06,753 Sampling competed, starting to add dilution solvent...
+2021-09-16 08:53:06,773 Run 1 of 10, adding dilution solvent CH3CN 0.2 mL to GC/LC vial at A1
+2021-09-16 08:53:23,003 Run 2 of 10, adding dilution solvent CH3CN 0.2 mL to GC/LC vial at A2
+2021-09-16 08:53:41,049 Run 3 of 10, adding dilution solvent CH3CN 0.2 mL to GC/LC vial at A3
+2021-09-16 08:53:58,937 Run 4 of 10, adding dilution solvent CH3CN 0.2 mL to GC/LC vial at A4
+2021-09-16 08:54:16,683 Run 5 of 10, adding dilution solvent CH3CN 0.2 mL to GC/LC vial at A5
+2021-09-16 08:54:34,258 Run 6 of 10, adding dilution solvent CH3CN 0.2 mL to GC/LC vial at B1
+2021-09-16 08:54:52,082 Run 7 of 10, adding dilution solvent CH3CN 0.2 mL to GC/LC vial at B2
+2021-09-16 08:55:10,133 Run 8 of 10, adding dilution solvent CH3CN 0.2 mL to GC/LC vial at B3
+2021-09-16 08:55:28,039 Run 9 of 10, adding dilution solvent CH3CN 0.2 mL to GC/LC vial at B4
+2021-09-16 08:55:46,191 Run 10 of 10, adding dilution solvent CH3CN 0.2 mL to GC/LC vial at B5
+2021-09-16 08:56:25,871 *Finished*
+
+2021-09-16 09:00:14,377 Run 1 of 5, transfer cap for reactor@ A1
+2021-09-16 09:00:29,874 Run 2 of 5, transfer cap for reactor@ A2
+2021-09-16 09:00:45,948 Run 3 of 5, transfer cap for reactor@ A3
+2021-09-16 09:01:02,025 Run 4 of 5, transfer cap for reactor@ A4
+2021-09-16 09:01:18,099 Run 5 of 5, transfer cap for reactor@ A5
+2021-09-16 09:01:34,080 Finished**************
+
+2021-09-16 09:04:35,455 Starting transfering...
+2021-09-16 09:04:53,654 Run 1 of 1, adding solvent NaCl-water 1.0 mL to reactor at A1 using tip H1
+2021-09-16 09:05:35,754 Starting transfering...
+2021-09-16 09:05:54,406 Run 1 of 1, adding solvent MeOtBu 1.2 mL to reactor at A1 using tip A2
+2021-09-16 09:07:13,921 *Finished*
+
+2021-09-16 12:21:09,792 Com ports: xy_port= COM5, z_port= COM16, gripper_port= COM6, pipette_port= COM9
+2021-09-16 14:45:52,212 Com ports: xy_port= COM5, z_port= COM16, gripper_port= COM6, pipette_port= COM9
+2021-09-16 15:59:36,234 Com ports: xy_port= COM5, z_port= COM16, gripper_port= COM6, pipette_port= COM9
