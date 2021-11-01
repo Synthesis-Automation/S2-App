@@ -1,0 +1,48 @@
+2021-11-01 16:34:10,979 Com ports: xy_port= None, z_port= COM3, gripper_port= COM7, pipette_port= COM11
+2021-11-01 16:34:33,788 Com ports: xy_port= COM12, z_port= COM3, gripper_port= COM7, pipette_port= COM11
+2021-11-01 16:45:41,548 Simulation mode （模拟运行模式）..........................................................
+2021-11-01 16:45:41,563 Reaction No. 1 of 1, (tracking number: 11/01/2021/16:45/1)
+2021-11-01 16:45:41,563 Transfer MeOH (pure_liquid, 1.0 mL) from vial@ (C2, B2), to reactor@ A1 ...
+2021-11-01 16:45:41,626 Add cap to reactor@ A1
+2021-11-01 16:45:41,626  
+2021-11-01 16:45:41,626 *Finished*
+
+2021-11-01 16:45:41,642 Synthesis plan was parsed successfully! All reagents have been located.
+2021-11-01 16:45:41,642 Required plates: plate_50mL:001
+
+2021-11-01 16:45:41,642 End of simulation..................................................................
+
+2021-11-01 16:45:50,784 Simulation mode （模拟运行模式）..........................................................
+2021-11-01 16:45:50,800 Reaction No. 1 of 1, (tracking number: 11/01/2021/16:45/1)
+2021-11-01 16:45:50,800 Transfer MeOH (pure_liquid, 1.0 mL) from vial@ (C2, B2), to reactor@ A1 ...
+2021-11-01 16:45:50,862  
+2021-11-01 16:45:50,862 *Finished*
+
+2021-11-01 16:45:50,878 Synthesis plan was parsed successfully! All reagents have been located.
+2021-11-01 16:45:50,878 Required plates: plate_50mL:001
+
+2021-11-01 16:45:50,894 End of simulation..................................................................
+
+2021-11-01 16:46:42,347 Start running...........................................................................
+2021-11-01 16:46:42,351 Reaction No. 1 of 1, (tracking number: 11/01/2021/16:45/1)
+2021-11-01 16:46:42,353 Transfer MeOH (pure_liquid, 1.0 mL) from vial@ (C2, B2), to reactor@ A1 ...
+2021-11-01 16:48:08,548  
+2021-11-01 16:48:08,548 *Finished*
+
+2021-11-01 17:25:55,383 Simulation mode （模拟运行模式）..........................................................
+2021-11-01 17:25:55,383 Reaction No. 1 of 1, (tracking number: 11/01/2021/17:25/1)
+2021-11-01 17:25:55,383 Transfer Cyclobutanone (pure_liquid, 0.0102 mL) from vial@ (C4, A2), to reactor@ A2 ...
+2021-11-01 17:25:55,446  
+2021-11-01 17:25:55,446 *Finished*
+
+2021-11-01 17:25:55,446 Synthesis plan was parsed successfully! All reagents have been located.
+2021-11-01 17:25:55,446 Required plates: plate_10mL:001
+
+2021-11-01 17:25:55,461 End of simulation..................................................................
+
+2021-11-01 17:26:19,397 Start running...........................................................................
+2021-11-01 17:26:19,399 Reaction No. 1 of 1, (tracking number: 11/01/2021/17:25/1)
+2021-11-01 17:26:19,406 Transfer Cyclobutanone (pure_liquid, 0.0102 mL) from vial@ (C4, A2), to reactor@ A2 ...
+2021-11-01 17:27:27,277  
+2021-11-01 17:27:27,277 *Finished*
+
