@@ -7,6 +7,7 @@ from chem_robox import parameters
 import logging
 from chem_robox.parameters import CAPPER, LIQUID, TABLET
 
+
 class Z_platform(object):
     def __init__(self, port="", head_offsets={}, calibration={}):
         self.port = port
@@ -57,7 +58,7 @@ class Z_platform(object):
 
     def move_to(self, head='Z1', z=0):
         if self.stop_flag:
-            self.home(head = head)
+            self.home(head=head)
             return False
         new_z = self.head_offsets[head][2]-z
         cmd = 'move_to_'+head+'$' + str(int(new_z*parameters.steps_per_mm_Z))
@@ -68,7 +69,7 @@ class Z_platform(object):
     def move_to_abs(self, head='Z1', z=0):
         """this function use unfliped coordinates """
         if self.stop_flag:
-            self.home(head = head)
+            self.home(head=head)
             return False
         new_z = z
         cmd = 'move_to_'+head+'$' + str(int(new_z*parameters.steps_per_mm_Z))
@@ -78,7 +79,7 @@ class Z_platform(object):
 
     def move(self, head=CAPPER, z=0):
         if self.stop_flag:
-            self.home(head = head)
+            self.home(head=head)
             return False
         cmd = 'move_'+head+'$' + str(int(-1*z*parameters.steps_per_mm_Z))
         self.serial_connection.send_command(cmd)
@@ -96,9 +97,8 @@ class Z_platform(object):
             self.serial_connection.send_command(cmd)
             self.serial_connection.wait_for_finish()
         else:
-            self.home(head = TABLET)
+            self.home(head=TABLET)
             return False
-
 
     def drop_tablet(self):  # this function only eject tablet and no Z movement
         if self.stop_flag == False:
@@ -107,5 +107,16 @@ class Z_platform(object):
             self.serial_connection.wait_for_finish()
             return True
         else:
-            self.home(head = TABLET)
+            self.home(head=TABLET)
+            return False
+
+    # this function only eject tablet and no Z movement
+    def engage_leak_protector(self):
+        if self.stop_flag == False:
+            cmd = 'engage_leak_protector$0'
+            self.serial_connection.send_command(cmd)
+            self.serial_connection.wait_for_finish()
+            return True
+        else:
+            self.home(head=TABLET)
             return False

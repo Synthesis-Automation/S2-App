@@ -29,17 +29,20 @@ z_platform.home(head='Z1')
 z_platform.home(head='Z2')
 z_platform.home(head='Z3')
 
+z_platform.engage_leak_protector()
+
+
 # z_platform.pickup_tablet()
 # input("pickup")
 # z_platform.drop_tablet()
-DISTANCE = 180
-for i in range(15):
-    z_platform.move(head="Z1", z=-1*DISTANCE)
-    z_platform.move(head="Z1", z=DISTANCE)
-    z_platform.move(head="Z2", z=-1*DISTANCE)
-    z_platform.move(head="Z2", z=DISTANCE)
-    z_platform.move(head="Z3", z=-1*DISTANCE)
-    z_platform.move(head="Z3", z=DISTANCE)
+# DISTANCE = 180
+# for i in range(15):
+#     z_platform.move(head="Z1", z=-1*DISTANCE)
+#     z_platform.move(head="Z1", z=DISTANCE)
+#     z_platform.move(head="Z2", z=-1*DISTANCE)
+#     z_platform.move(head="Z2", z=DISTANCE)
+#     z_platform.move(head="Z3", z=-1*DISTANCE)
+#     z_platform.move(head="Z3", z=DISTANCE)
 
 # z_platform.move_to_abs(head="Z2", z=3)
 

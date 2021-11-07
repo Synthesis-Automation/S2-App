@@ -1582,14 +1582,16 @@ class Tip_calibration(ttk.Frame):
     def __init__(self):
         self.popup_window = Toplevel()
         self.popup_window.title("Tip Calibration ")
-
+        self.HILIGHT_STYLE = "Green.TButton"
+        self.NORMAL_STYLE = "Default.TButton"
         # Slot selector
-        move_botton = Button(self.popup_window, text="Calibrate tip rack (1000 uL)", style="Default.TButton",
+        self.move_botton = Button(self.popup_window, text="Calibrate tip rack (1000 uL)", style="Default.TButton",
                              command=lambda: self.move_to_tip_rack(rack = "Tips 1000uL"))
-        move_botton.grid(column=0, row=0, pady=5)
-        move_botton_2 = Button(self.popup_window, text="Calibrate tip rack (50 uL)", style="Default.TButton",
+        self.move_botton.grid(column=0, row=0, pady=5)
+        self.move_botton.configure(style=self.HILIGHT_STYLE)
+        self.move_botton_2 = Button(self.popup_window, text="Calibrate tip rack (50 uL)", style="Default.TButton",
                              command=lambda: self.move_to_tip_rack(rack = "Tips 50uL"))
-        move_botton_2.grid(column=1, row=0, pady=5)
+        self.move_botton_2.grid(column=1, row=0, pady=5)
         self.tip_plate = "Tips 1000uL" # defalut rack
         # Label(self.popup_window, text=" ").grid(column=1, row=7, padx=10, pady=10)
 
@@ -1644,6 +1646,12 @@ class Tip_calibration(ttk.Frame):
         self.popup_window.destroy()
 
     def move_to_tip_rack(self, rack = "Tips 1000uL"):
+        if rack == "Tips 1000uL":
+            self.move_botton.configure(style=self.HILIGHT_STYLE)
+            self.move_botton_2.configure(style=self.NORMAL_STYLE)
+        else:
+            self.move_botton_2.configure(style=self.HILIGHT_STYLE)
+            self.move_botton.configure(style=self.NORMAL_STYLE)
         self.tip_plate = chem_robot.deck.get_plate_assignment(rack)
         vial_to = (self.tip_plate, "A1")
         chem_robot.move_to(head=LIQUID, vial=vial_to)
